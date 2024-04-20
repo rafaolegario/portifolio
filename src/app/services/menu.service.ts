@@ -11,7 +11,7 @@ export class MenuService {
   getItems(): Array<Menu>{
     const menu: Array<Menu> = [
       {
-        name: 'início',
+        name: 'Início',
         url: '#banner'
       },
       {

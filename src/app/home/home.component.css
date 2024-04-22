@@ -1,10 +1,12 @@
+/*Box banner*/
+
 .banner{
     display: flex;
     justify-content: center;
     background-image: linear-gradient(180deg, var(--color-blue-2) 15%, var(--color-blue-3));
     color: #fff;
     align-items: center;
-    padding-top: 70px;
+    padding-top: 10px;
     text-align: center;
     height: 940px;
 }
@@ -64,6 +66,7 @@
     color: #fff;
     gap: 7px;
     transition: all 0.2s ease-in;
+   
 }
 
 .buttons a:hover{
@@ -93,7 +96,8 @@
 }
 
 .arrow i{
-    margin-top:120px ;
+    color: rgb(243, 239, 239);
+    margin-top:100px ;
     transform: translateY(0px) ;
     animation: float 3s ease-in-out infinite;
 }
@@ -130,5 +134,96 @@
     }
     .buttons a{
         width: 300px;
+    }
+}
+
+/*Box about*/
+
+.about .box{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(243, 239, 239);
+
+}
+
+.about .box .img{
+    flex: 1;
+    margin: 0 auto 20px;
+}
+
+.about .box .img img{
+    width: 240px;
+}
+
+.text{
+    flex: 2;
+
+}
+
+.text h2{
+    margin-bottom: 20px;
+}
+
+.text p{
+    text-align: justify;
+    margin: 15px 4px 15px 0px;
+    
+}
+
+.aboutLinks{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.aboutLinks a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px;
+    border-radius: 40px;
+    margin: 0px 5px 15px;
+    min-width: 220px;
+    font-size: var(--font-size-4);
+    font-weight: 700;
+    background: var(--color-blue-1);
+    text-decoration: none;
+    color: #fff;
+    gap: 7px;
+    transition: all 0.2s ease-in;
+    
+}
+
+.aboutLinks a:hover{
+    background-color: var(--color-blue-2);
+}
+
+@media (min-width: 1000px){
+
+    .about{
+        background-color: rgb(243, 239, 239);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .about .box {
+        flex-direction: row;
+        
+        
+    }
+
+    .about .box .img{
+        flex: 0;
+    }
+
+    .about .box .img img{
+        width: 500px;
+       padding: 40px;
+    }
+    .aboutLinks {
+        flex-direction: row;
+    }
+
+    .text p{
+        width: 700px;
     }
 }

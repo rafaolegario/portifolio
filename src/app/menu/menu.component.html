@@ -1,7 +1,7 @@
 <nav>
     <ul [class]="menuStatus">
         <li *ngFor="let item of menuItens">
-            <a [href]="item.url">{{item.name}}</a>
+            <a [href]="item.url" (click)="menuClick()">{{item.name}}</a>
         </li>
     </ul>
 

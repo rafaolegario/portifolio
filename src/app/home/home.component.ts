@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ProfileService } from '../services/profile.service';
+import { Profile } from '../models/profile';
 
 @Component({
   selector: 'app-home',
@@ -15,6 +16,11 @@ export class HomeComponent {
   
   ProjectStatus = 'closed'
   MoreText = 'Ver Mais'
+  profile?: Profile 
+
+  ngOnInit(){
+    this.profile = this.profileService.getProfile()
+  }
 
   MoreProjects() {
     this.ProjectStatus = (this.ProjectStatus === 'open' ? 'closed': 'open')

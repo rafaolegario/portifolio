@@ -10,6 +10,19 @@ import { ProfileService } from '../services/profile.service';
 })
 export class HomeComponent {
 
+
   constructor(private profileService:ProfileService){}
   
+  ProjectStatus = 'closed'
+  MoreText = 'Ver Mais'
+
+  MoreProjects() {
+    this.ProjectStatus = (this.ProjectStatus === 'open' ? 'closed': 'open')
+
+    if(this.ProjectStatus === 'open'){
+      this.MoreText = 'Cancelar'
+    } else{
+      this.MoreText = 'Ver Mais'
+    }
+  }
 }

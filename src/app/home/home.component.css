@@ -293,7 +293,7 @@
 }
 
 .projects .box .project .img {
-  flex: 1;
+  flex: 3;
 }
 
 .projects .box .project .text {
@@ -304,6 +304,12 @@
 
 .projects .box .project .img img {
   width: 100%;
+  transition: all 0.6s ease-in-out;
+}
+
+.projects .box .project .img img:hover {
+  width: 110%;
+  
 }
 
 .projects .box .project .text h4 {
@@ -324,6 +330,11 @@
   align-items: center;
   text-decoration: none;
   gap: 8px;
+  transition: all 0.2s;
+}
+
+.projects .box .project .text .projectButtons a:hover{
+  opacity: 0.93;
 }
 
 .projects .box .project .text .projectButtons {
@@ -334,6 +345,11 @@
 
 .projects .box .project .text .projectButtons a.live {
   background-color: var(--color-blue-1);
+  transition: all 0.2s;
+}
+
+.projects .box .project .text .projectButtons a.live:hover {
+  background-color: var(--color-blue-2);
 }
 
 .projects .box .project .text .projectButtons a i {
@@ -360,6 +376,7 @@
 
 .closed{
     display: none;
+    transition: all 1s ease-in-out;
 }
 
 .open{
@@ -369,6 +386,7 @@
     background-color: #fff;
     flex-direction: column;
     width: 100%;
+    transition: all 1s ease-in-out;
     
 }
 
@@ -378,4 +396,60 @@
    margin-left: auto;
    margin-right: 15px;
    font-size: 25px;
+}
+
+.projects .box .project .text .tecnologiasProjects {
+  color: var(--color-blue-2);
+  font-weight: 600;
+  font-size: var(--font-size-3);
+  
+}
+
+.projects .box .project .text .tecnologiasProjects i{
+  color: #181616;
+  font-size: 49px;
+  padding: 3px 5px;
+  transition: all 0.2s ease-in;
+  
+
+}
+.projects .box .project .text .tecnologiasProjects i:hover{
+  color: var(--font-size-2);
+  font-size: 52px;
+  position: relative;
+}
+
+.projects .box .project .text .tecnologiasProjects abbr{
+  text-decoration: none;
+  
+}
+
+
+@media (min-width: 768px) {
+
+  .projects .box .project, .projects .box .project.reverse{
+    flex-direction: row;
+  }
+
+  .projects .box h3 {
+   
+    font-size: var(--font-size-3);
+    
+  }
+
+  .projects .box h2{
+    font-size: var(--font-size-2);
+  }
+
+  .projects .box .project .text p{
+    font-size: var(--font-size-3);
+  }
+
+  #btnFechar{
+    margin: 0 auto;
+    background-color: var(--color-blue-0);
+    border-radius: 40px;
+    padding: 15px;
+  }
+
 }

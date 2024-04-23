@@ -20,7 +20,7 @@ export class HomeComponent {
     this.ProjectStatus = (this.ProjectStatus === 'open' ? 'closed': 'open')
 
     if(this.ProjectStatus === 'open'){
-      this.MoreText = 'Cancelar'
+      this.MoreText = 'Ver Menos'
     } else{
       this.MoreText = 'Ver Mais'
     }

@@ -1,3 +1,7 @@
+.container{
+  padding-top: 60px;
+}
+
 /*Box banner*/
 
 .banner {
@@ -305,6 +309,7 @@
   rotate: -15deg;
 }
 
+
 .closed {
   display: none;
   transition: all 1s ease-in-out;
@@ -340,7 +345,16 @@
   padding: 3px 5px;
   transition: all 0.2s ease-in;
 }
-.projects .box .project .text .tecnologiasProjects i:hover {
+
+.projects .box .project .text .tecnologiasProjects .DescriptionHidden{
+  display: none;
+}
+
+.projects .box .project .text .tecnologiasProjects i:hover .DescriptionHidden{
+  display: flex;
+}
+
+.projects .box .project .text .tecnologiasProjects i:hover  {
   color: var(--font-size-2);
   font-size: 52px;
   position: relative;
